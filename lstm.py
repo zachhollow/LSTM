@@ -135,7 +135,6 @@ def Run_LSTM(X_train, layer_units=50):
 
     return model
 
-
 model = Run_LSTM(X_train, layer_units=layer_units)
 
 history = model.fit(
