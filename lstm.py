@@ -13,6 +13,7 @@ from sklearn.metrics import classification_report
 import matplotlib.pyplot as plt
 from tensorflow.keras.layers import Input, LSTM, Dense
 from tensorflow.keras.models import Model
+from sklearn.preprocessing import StandardScaler
 
 def get_previous_business_day(date):
     if date.weekday() == 0:  
@@ -100,7 +101,6 @@ def plot_stock_trend(var, cur_title, stockprices=stockprices):
     plt.axis("tight")
     plt.ylabel("Stock Price ($)")
 
-
 layer_units = 50
 optimizer = "adam"
 cur_epochs = 15
@@ -112,7 +112,6 @@ cur_LSTM_args = {
     "batch_size": cur_batch_size,
     "epochs": cur_epochs,
 }
-from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(stockprices[["Closing Price"]])
