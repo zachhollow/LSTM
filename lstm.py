@@ -122,7 +122,7 @@ X_train, y_train = extract_seqX_outcomeY(scaled_data_train, window_size, window_
 
 ### Build a LSTM model and log training progress to Neptune ###
 
-def Run_LSTM(X_train, layer_units=50):
+def run_LSTM(X_train, layer_units=50):
     inp = Input(shape=(X_train.shape[1], 1))
 
     x = LSTM(units=layer_units, return_sequences=True)(inp)
@@ -135,7 +135,7 @@ def Run_LSTM(X_train, layer_units=50):
 
     return model
 
-model = Run_LSTM(X_train, layer_units=layer_units)
+model = run_LSTM(X_train, layer_units=layer_units)
 
 history = model.fit(
     X_train,
