@@ -1,4 +1,4 @@
-# LSTM Forecasting Models Repository
+# LSTM Forecasting 
 
 ## Overview
 This repository contains two IPYNB (Jupyter Notebook) files implementing LSTM (Long Short-Term Memory) models for time-series forecasting. One model is designed for forecasting past data, while the other focuses on predicting future data.
