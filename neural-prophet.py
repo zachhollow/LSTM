@@ -10,7 +10,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
-import neptune
 import matplotlib.pyplot as plt
 
 def get_previous_business_day(date):
