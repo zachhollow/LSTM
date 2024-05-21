@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 import matplotlib.pyplot as plt
+from neuralprophet import NeuralProphet
 
 def get_previous_business_day(date):
     if date.weekday() == 0:  
@@ -51,8 +52,6 @@ df = pd.DataFrame(data['bars'][symbol])
 df.columns = ['y', 'High', 'Low', 'Number of Trades', 'Open', 'date', 'Volume', 'VWAP']
 
 df['ds'] = pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
-
-from neuralprophet import NeuralProphet
 
 df = df[['ds', 'y']]
 
