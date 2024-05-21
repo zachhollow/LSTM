@@ -165,10 +165,16 @@ predicted_price = scaler.inverse_transform(predicted_price_)
 
 # Plot predicted price vs actual closing price
 test["Predictions_lstm"] = predicted_price
+
 # Evaluate performance
 rmse_lstm = calculate_rmse(np.array(test["Closing Price"]), np.array(test["Predictions_lstm"]))
 mape_lstm = calculate_mape(np.array(test["Closing Price"]), np.array(test["Predictions_lstm"]))
 
+# Display the results
+print(f"Performance of LSTM Model:")
+print(f"Root Mean Square Error (RMSE): {rmse_lstm:.4f}")
+print(f"Mean Absolute Percentage Error (MAPE): {mape_lstm:.2f}")
+      
 ### Plot prediction and true trends and log to Neptune
 def plot_stock_trend_lstm(train, test):
     fig = plt.figure(figsize = (20,10))
