@@ -1,7 +1,7 @@
 # LSTM Forecasting 
 
 ## Overview
-This repository contains one IPYNB (Jupyter Notebook) file implementing a LSTM (Long Short-Term Memory) model for time-series forecasting. The model uses Keras  for orecasting past data.
+This repository contains one IPYNB (Jupyter Notebook) file implementing a LSTM (Long Short-Term Memory) model for time-series forecasting. The model uses Keras  for forecasting past data.
 ## Files
 - **LSTM-past.ipynb**: This notebook has the LSTM model for forecasting past data. It includes data preprocessing, model training, evaluation, and visualization of results.
   
